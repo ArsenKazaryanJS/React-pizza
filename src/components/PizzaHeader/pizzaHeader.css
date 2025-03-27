@@ -1,0 +1,99 @@
+
+.header {
+    background-color: var( --pizza-background); 
+    padding: 20px 0;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header__logo img {
+    margin-right: 10px;
+}
+
+.header__logo h1 {
+    font-size: 24px;
+    margin: 0;
+    text-align: start;
+    color: var(--pizza-white);
+}
+
+.header__logo p {
+    margin: 0;
+    color: var(--pizza-white);
+}
+
+
+.header__cart {
+    display: flex;
+    width: 150px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: var(--pizza-color); 
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button__delimiter {
+    width: 1px;
+    height: 18px;
+    background-color: #ff6347; 
+    margin: 0 10px;
+}
+
+.button--cart {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px 15px;
+    text-decoration: none; 
+    color: #333; 
+    transition: background-color 0.3s;
+}
+
+.button--cart:hover {
+    background-color: #e0e0e0; 
+}
+
+.button__delimiter {
+    width: 1px; 
+    height: 20px; 
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+.button--cart span {
+    font-size: 16px; 
+    margin-right: 5px; 
+}
+
+.button--cart svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px; 
+}

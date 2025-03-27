@@ -1,0 +1,31 @@
+.categories {
+  
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .categories ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .categories li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+    border: solid 1px var(--pizza-color);
+  }
+  
+  .categories li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .categories li.active {
+    background-color: var(--pizza-color);
+    color: white;
+  }

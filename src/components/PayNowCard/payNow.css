@@ -1,0 +1,67 @@
+
+
+.cart-pizzaCard{
+    display: flex;
+    border-bottom: 1px solid var(--pizza-color);
+    padding-bottom: 10px;
+    justify-content: space-between;
+    padding-top: 10px;
+    user-select: none;
+
+}
+.cart-pizzaCard-imgBox{
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    h3{
+        color: var(--pizza-color);
+    }
+    img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+        border-radius: 50%;
+    }
+}
+
+
+.priceAndCountBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 230px;
+    .count-box{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        svg{
+            width: 30px;
+            height: 30px;
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.2s all;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+        }
+        svg:hover{
+            background-color: #2c3e503d;
+        }
+        svg:active{
+            transform: scale(0.9);
+        }
+    }
+}
+
+.pizza-price{
+    p{
+        color: var(--pizza-color);
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+}
+
+.x{
+    color: #2c3e50;
+    cursor: pointer;
+}

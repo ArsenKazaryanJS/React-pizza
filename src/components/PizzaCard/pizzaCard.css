@@ -1,0 +1,138 @@
+
+
+.pizza-card {
+    background-color: var(--pizza-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin: 15px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    transition: 0.3s all;
+}
+.pizza-card:hover{
+    transform: scale(1.05);
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+.img_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.pizza-block__image {
+    margin-left: 10px;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.pizza-block__title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--pizza-color);
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.pizza-block__selector {
+    margin: 15px 0;
+}
+
+.pizza-block__selector ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.pizza-block__selector li {
+    padding: 8px 15px;
+    margin: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.pizza-block__selector li.active {
+    background-color: var( --pizza-color);
+    color: #fff;
+    border-color: var( --pizza-color);
+}
+
+.pizza-block__selector li:hover {
+    background-color: var( --pizza-color);
+    color: #fff;
+    border-color: var( --pizza-color);
+}
+
+.pizza-block__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--pizza-background);
+    border-radius: 0 0 10px 10px;
+    user-select: none;
+}
+
+.pizza-block__price {
+    font-size: 18px;
+    padding-left: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid var(--pizza-background);
+    border-radius: 5px;
+    color: var(   --pizza-white);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button--outline {
+    background-color: transparent;
+}
+
+.button--add {
+    display: flex;
+    align-items: center;
+}
+
+.button--add span {
+    margin-left: 10px;
+}
+
+.button:hover {
+    background-color: var(--pizza-background);
+    color: #fff;
+    border-color: var(--pizza-background);
+}
+
+.button i {
+    background-color: #fff;
+    color: var(--pizza-background);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.button:hover i {
+    background-color: #fff;
+    color: var(--pizza-background);
+}
+
