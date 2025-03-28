@@ -1,6 +1,6 @@
 {
   "name": "react-pizza",
-  "homepage": "https://arsenkazaryanjs.github.io/react-pizza/",
+  "homepage": "https://arsenkazaryanjs.github.io/React-pizza/",
   "version": "0.1.0",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
