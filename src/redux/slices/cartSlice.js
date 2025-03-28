@@ -13,8 +13,11 @@ const cartSlice = createSlice({
       const repeatItem = state.items.find((el) => el.id === action.payload.id);
       if (repeatItem) {
         repeatItem.count++;
+        if (!repeatItem.size.includes(action.payload.size[0])) {
+          repeatItem.size.push(action.payload.size[0]);
+        }
       } else {
-        state.items.push({ ...action.payload, count: 1 });
+        state.items.push({ ...action.payload, count: 1, size: action.payload.size });
       }
       state.totalPrice = state.items.reduce(
         (total, pizza) => total + pizza.price * pizza.count,

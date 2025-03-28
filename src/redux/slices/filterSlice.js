@@ -23,7 +23,7 @@ const filterSlice = createSlice({
             state.sortTypeId = action.payload;
         },
         filterPizzas(state, action) {
-           state.filteredPizzas = action.payload
+           state.filteredPizzas = action.payload;
         }
     },
 });

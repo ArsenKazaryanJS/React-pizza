@@ -1,9 +1,9 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice} from '@reduxjs/toolkit';
+import { fetchPizzasAPI } from '../services/pizzaAPI';
 
-export const fetchPizzas = createAsyncThunk('pizzas/fetchPizzas', async () => {
-    const response = await fetch('https://65999411652b843dea52f53a.mockapi.io/pizza');
-    return await response.json();
-});
+export const fetchPizzasThunk = createAsyncThunk('pizzas/fetchPizzasApi', fetchPizzasAPI)
+
+
 
 const initialState = {
     pizzas: [],
@@ -17,14 +17,14 @@ const pizzaSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(fetchPizzas.pending, (state) => {
+            .addCase(fetchPizzasThunk.pending, (state) => {
                 state.status = 'loading';
             })
-            .addCase(fetchPizzas.fulfilled, (state, action) => {
+            .addCase(fetchPizzasThunk.fulfilled, (state, action) => {
                 state.status = 'succeeded';
                 state.pizzas = action.payload;
             })
-            .addCase(fetchPizzas.rejected, (state, action) => {
+            .addCase(fetchPizzasThunk.rejected, (state, action) => {
                 state.status = 'failed';
                 state.error = action.error.message;
             });

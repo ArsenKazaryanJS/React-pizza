@@ -1,6 +1,6 @@
 import { Minus, Plus, X } from 'lucide-react';
 import './payNow.css';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { plusMinus, removeItem } from '../../redux/slices/cartSlice';
 
 export const PayNowCard = ({ pizza }) => {
@@ -12,10 +12,9 @@ export const PayNowCard = ({ pizza }) => {
                 <img src={pizza.imageUrl} alt={pizza.title} />
                 <div className="cart-pizzaCard-title">
                     <h3>{pizza.title}</h3>
-                    <p>{pizza.type}, {pizza.size} см.</p>
+                    <p>{pizza.type}, { pizza.size.map((el,i)=> <span key={i}>{el} см.</span>)}</p>
                 </div>
             </div>
-
             <div className="priceAndCountBox">
                 <div className="count-box">
                     <Minus onClick={()=> dispatch(plusMinus({id:pizza.id,argument:'minus'}))}/>

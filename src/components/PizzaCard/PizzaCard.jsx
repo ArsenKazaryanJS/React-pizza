@@ -4,7 +4,7 @@ import { Plus } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { addPizza } from "../../redux/slices/cartSlice";
 
-export const PizzaCard = ({id,title, imageUrl, sizes, types, price}) => {
+export const PizzaCard = ({id, title, imageUrl, sizes, types, price}) => {
     const dispatch = useDispatch();  
     const item = useSelector((state)=> state.cart.items.find((el)=> el.id === id))
     const cartItem = item ? item.count : ''
@@ -20,7 +20,7 @@ export const PizzaCard = ({id,title, imageUrl, sizes, types, price}) => {
       price,
       imageUrl,
       type:typeArray[typeCardIndex],
-      size:sizes[sizeCardIndex]
+      size:[sizes[sizeCardIndex]]
     }
     dispatch(addPizza(item))
   };

@@ -19,7 +19,7 @@ ul{
 }
 
 .wrapper {
-    max-width: 1260px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -64,3 +64,11 @@ ul{
     justify-content: space-between;
     align-items: center;
 }
+@media (max-width: 1000px) {
+    .content__top {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+  }

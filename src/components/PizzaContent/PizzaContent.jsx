@@ -1,35 +1,17 @@
-import { useSelector, useDispatch } from "react-redux";
-import { PizzaCard } from "../PizzaCard/PizzaCard";
 import { useEffect } from "react";
-import { fetchPizzas } from "../../redux/slices/pizzasSlice";
-import { filterPizzas } from "../../redux/slices/filterSlice";
+import { useDispatch } from "react-redux";
+import { PizzaCard } from "../PizzaCard/PizzaCard";
+import { fetchPizzasThunk } from "../../redux/slices/pizzasSlice";
+import { useFilteredPizzas } from "../../hooks/useFilteredPizzas"; // Adjust the path as necessary
 
 export const PizzaContent = () => {
-    const { filteredPizzas, categoryId, sortTypeId } = useSelector((state) => state.filters);
-    const {pizzas} = useSelector((state) => state.pizzas); 
     const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(fetchPizzas()); 
-    }, [dispatch]);
-
+    const {filteredPizzas} = useFilteredPizzas();
     
-    useEffect(() => {
-        //categori filter
-        const newFilterArray = pizzas.filter((pizza) => 
-            categoryId === 0 ? true : pizza.category === categoryId
-        );
 
-        //sort
-        if(sortTypeId === 0){
-            newFilterArray.sort((a, b) => a.rating - b.rating)}
-         else if (sortTypeId === 1) {
-            newFilterArray.sort((a, b) => a.price - b.price);
-        } else if (sortTypeId === 2) {
-            newFilterArray.sort((a, b) => a.title.localeCompare(b.title));
-        }
-        dispatch(filterPizzas(newFilterArray));
-    }, [categoryId, sortTypeId, pizzas, dispatch]);
+    useEffect(() => {
+        dispatch(fetchPizzasThunk());
+    }, [dispatch]);
 
     return (
         <>

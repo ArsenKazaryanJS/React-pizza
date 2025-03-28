@@ -23,7 +23,7 @@ export const PizzaHeader = () => {
       </div>
       <div className="header__cart">
         <NavLink to='/cart' className="button--cart">
-          <span>{totalPrice} ₽</span>
+          <span className='total-price-span'>{totalPrice} ₽</span>
           <div className="button__delimiter"></div>
           <ShoppingBasket />
           {
