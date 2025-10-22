@@ -2,11 +2,12 @@ import {MoveLeft} from "lucide-react";
 import './cart.css'
 import { PayNowCard } from "../../components/PayNowCard/PayNowCard";
 import { useSelector } from "react-redux";
-import { NavLink } from 'react-router';
+import {useNavigate } from 'react-router';
 import { CartEmpty } from "../../components/CratEmpty/CartEmpty";
 import { CartHead } from "../../components/CartHead/CartHead";
 
 export const Cart = () => {
+  const navigate = useNavigate()
   const { items, totalPrice } = useSelector((state) => state.cart);
   const totalCount = items.reduce((sum, item) => sum + item.count, 0); 
 
@@ -32,7 +33,7 @@ export const Cart = () => {
       </div>
     </div>
     <div className="puyNow-backNow">
-      <NavLink to="/"><MoveLeft /> Вернуться назад</NavLink>
+      <button onClick={()=> navigate(-1)}><MoveLeft /> <p>Вернуться назад</p></button>
       <button>Оплатить сейчас</button>
     </div>
         </div>

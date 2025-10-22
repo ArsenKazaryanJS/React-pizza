@@ -12,7 +12,7 @@ export const CartEmpty = () => {
             <p>Вероятней всего, вы не заказывали ещё пиццу. <br />
             Для того, чтобы заказать пиццу, перейди на главную страницу.</p>
          <div className="emptyCart-btn-box">
-         <button onClick={()=>navigate(-1)}><ArrowLeft />Вернуться назад</button>
+         <button onClick={()=>navigate(-1)}><ArrowLeft /><p>Вернуться назад</p></button>
          </div>
             </div>
         </div>

@@ -8,7 +8,6 @@ export const PizzaContent = () => {
     const dispatch = useDispatch();
     const {filteredPizzas} = useFilteredPizzas();
     
-
     useEffect(() => {
         dispatch(fetchPizzasThunk());
     }, [dispatch]);

@@ -13,7 +13,7 @@ export const PizzaHeader = () => {
     <div className="header">
     <div className="container">
       <div className="header__logo">
-        <NavLink to="/">
+        <NavLink to="/React-pizza/">
         <img width="38" src={logoSvg} alt="Pizza logo" />
         </NavLink>
         <div>
